@@ -14,6 +14,10 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.DefaultClientConnection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -48,6 +52,28 @@ public class XihaiwanActivity extends Activity {
 			public void run() {
 				//
 				content = (TextView) findViewById(R.id.content);
+				String myString = null;
+				StringBuffer sff = new StringBuffer();//一定要new一个，我刚开始搞忘了，出不来。
+				try  
+				{  
+				         Document doc = Jsoup.connect("http://www.cnblogs.com/agileyanly/p/4052627.html").get();  
+				        Elements links = doc.select("a[href]");  
+				        //注意这里是Elements不是Element。同理getElementById返回Element，getElementsByClass返回时Elements  
+				         for(Element link : links){  
+				              //这里没有什么好说的。  
+				             sff.append(link.attr("abs:href")).append("  ").append(link.text()).append(" ");  
+				            }  
+				          myString = sff.toString();  
+				     }  
+				       catch (Exception e)  
+				      {  
+				    	   myString = e.getMessage();  
+				           e.printStackTrace();  
+				       }  
+
+				
+				
+				
 				HttpGet httpget = new HttpGet(
 						"http://www.cnblogs.com/agileyanly/p/4052627.html");
 				HttpClient httpclient = new DefaultHttpClient();
