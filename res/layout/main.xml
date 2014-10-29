@@ -4,10 +4,74 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello" />
 
+
+<TextView 
+                android:id="@+id/breakfast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="早餐" />
+<TextView 
+                android:id="@+id/morningtaste"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="早点"/>
+<TextView 
+                android:id="@+id/lunch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="午餐"/>
+<TextView 
+                android:id="@+id/noontaste"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="午点"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期一" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期二" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期三" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期四" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期五" />
+
+    </LinearLayout>
 </LinearLayout>
