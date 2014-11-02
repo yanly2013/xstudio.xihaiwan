@@ -8,70 +8,116 @@
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
-
-<TextView 
-                android:id="@+id/breakfast"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="早餐" />
-<TextView 
-                android:id="@+id/morningtaste"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="早点"/>
-<TextView 
-                android:id="@+id/lunch"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="午餐"/>
-<TextView 
-                android:id="@+id/noontaste"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="午点"/>
-
-    <LinearLayout
+  <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期一" />
+            android:text="星期一"
+            android:textColor="@drawable/buttonstyle"
+            android:textSize="20px" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期二" />
+            android:text="星期二"
+            android:textColor="@drawable/buttonstyle"
+            android:textSize="20px" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期三" />
+            android:text="星期三"
+            android:textColor="@drawable/buttonstyle"
+            android:textSize="20px" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期四" />
+            android:text="星期四"
+            android:textColor="@drawable/buttonstyle"
+            android:textSize="20px" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期五" />
-
+            android:text="星期五"
+            android:textColor="@drawable/buttonstyle"
+            android:textSize="20px" />
     </LinearLayout>
+    
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/textviewstyle"
+        android:text="早餐" />
+
+    <TextView
+        android:id="@+id/breakfast"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:background="@drawable/textviewstyle"
+        android:text="早餐"
+        android:textSize="40px" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewstyle1"
+        android:text="早点" />
+
+    <TextView
+        android:id="@+id/morningtaste"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/textviewstyle1"
+        android:text="早点"
+        android:textSize="40px" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewstyle2"
+        android:text="午餐" />
+
+    <TextView
+        android:id="@+id/lunch"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/textviewstyle2"
+        android:text="午餐"
+        android:textSize="40px" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewstyle3"
+        android:text="午点" />
+
+    <TextView
+        android:id="@+id/noontaste"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/textviewstyle3"
+        android:text="午点"
+        android:textSize="40px" />
+
+  
 </LinearLayout>
