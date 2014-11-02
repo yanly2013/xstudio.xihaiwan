@@ -7,16 +7,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class navigatorActivity extends Activity {
-	private Button menu = null;
+	private ImageView menu = null;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+	    requestWindowFeature(Window.FEATURE_NO_TITLE);//»•µÙ±ÍÃ‚¿∏
 	    setContentView(R.layout.navigatoractivity);
 
-	    menu = (Button)findViewById(R.id.gotomenu);
+	    menu = (ImageView)findViewById(R.id.gotomenu);
 	    
 	    menu.setOnClickListener(new OnClickListener() {
 			

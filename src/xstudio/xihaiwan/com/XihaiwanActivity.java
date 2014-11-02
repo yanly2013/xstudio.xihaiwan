@@ -258,8 +258,8 @@ public class XihaiwanActivity extends Activity {
 							View view, final int position, long id) {
 						String str = parent.getItemAtPosition(position)
 								.toString();
-						Toast.makeText(XihaiwanActivity.this,
-								"你点击的是:" + position, 2000).show();
+//						Toast.makeText(XihaiwanActivity.this,
+//								"你点击的是:" + position, 2000).show();
 						new Thread() {
 							public void run() {
 								try {

@@ -4,15 +4,15 @@
     android:layout_height="50dp"
     android:layout_gravity="center_vertical"
     android:orientation="vertical" 
-    android:background="#FF07A2FE"
+    android:background="#FFEA7A1A"
 >
 
     <ImageButton 
 android:id="@+id/backimagebtn" 
 android:layout_width="wrap_content" 
 android:layout_height="wrap_content" 
-android:src="@drawable/ic_launcher" 
-android:background="#FF07A2FE"
+android:src="@drawable/backorange" 
+android:background="#FFEA7A1A"
 android:layout_alignParentLeft="true"
   android:layout_centerInParent="true"
 /> 
@@ -20,7 +20,7 @@ android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="每日食谱"
-        android:background="#FF07A2FE"
+        android:background="#FFEA7A1A"
         android:textSize="18sp"
         android:textColor="#FFFFFFFF"
         android:layout_centerInParent="true" />
