@@ -81,6 +81,7 @@ public class XihaiwanActivity extends Activity {
 		setContentView(R.layout.main);
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,
 				R.layout.menutitlebar); // titlebar为自己标题栏的布局
+		ExitApplication.getInstance().addActivity(this);
 		
 		content = (TextView) findViewById(R.id.content);
 		spinner = (Spinner) findViewById(R.id.spinner1);

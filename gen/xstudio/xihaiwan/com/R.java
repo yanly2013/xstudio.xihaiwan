@@ -36,12 +36,14 @@ public final class R {
         public static final int morningtaste=0x7f070008;
         public static final int noontaste=0x7f07000a;
         public static final int spinner1=0x7f070000;
+        public static final int webView1=0x7f07000e;
     }
     public static final class layout {
         public static final int main=0x7f030000;
         public static final int menutitlebar=0x7f030001;
         public static final int navigatoractivity=0x7f030002;
         public static final int startactivity=0x7f030003;
+        public static final int webcontentactivity=0x7f030004;
     }
     public static final class raw {
         public static final int xihaiwancover=0x7f040000;

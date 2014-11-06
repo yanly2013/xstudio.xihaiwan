@@ -22,6 +22,18 @@
            android:theme = "@style/navigator" >         
 
         </activity>
+                <activity
+            android:label="@string/app_name"
+            android:name=".contentlistActivity"
+           android:theme = "@style/test" >         
+
+        </activity>
+                <activity
+            android:label="@string/app_name"
+            android:name=".WebcontentActivity"
+           android:theme = "@style/test" >         
+
+        </activity>
          <activity
             android:label="@string/app_name"
             android:name=".startActivity"
