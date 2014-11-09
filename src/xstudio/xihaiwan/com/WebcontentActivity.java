@@ -9,6 +9,7 @@ import org.jsoup.select.Elements;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -19,12 +20,14 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class WebcontentActivity extends Activity {
 	private WebView noticeview = null;
 	private String webcontent = "";
 	private String contenturl = null;
 	private ImageButton backimg = null;
+	private TextView title = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -42,6 +45,9 @@ public class WebcontentActivity extends Activity {
 		noticeview.getSettings().setSupportZoom(false);
 		noticeview.getSettings().setBuiltInZoomControls(false);
 		noticeview.getSettings().setDefaultFontSize(18);
+		
+		title = (TextView)findViewById(R.id.title);
+		title.setText("Ð£Ô°×ÊÑ¶");
 		backimg = (ImageButton)findViewById(R.id.backimagebtn);
 		
 		backimg.setOnClickListener(new OnClickListener() {

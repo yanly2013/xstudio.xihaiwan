@@ -20,23 +20,27 @@ public final class R {
         public static final int textviewstyle1=0x7f020006;
         public static final int textviewstyle2=0x7f020007;
         public static final int textviewstyle3=0x7f020008;
+        public static final int xihaiwan=0x7f020009;
     }
     public static final class id {
-        public static final int backimagebtn=0x7f07000b;
-        public static final int breakfast=0x7f070007;
+        public static final int ScrollView=0x7f070007;
+        public static final int backimagebtn=0x7f07000d;
+        public static final int breakfast=0x7f070009;
         public static final int button1=0x7f070001;
         public static final int button2=0x7f070002;
         public static final int button3=0x7f070003;
         public static final int button4=0x7f070004;
         public static final int button5=0x7f070005;
-        public static final int content=0x7f070006;
-        public static final int gotoinformation=0x7f07000d;
-        public static final int gotomenu=0x7f07000c;
-        public static final int lunch=0x7f070009;
-        public static final int morningtaste=0x7f070008;
-        public static final int noontaste=0x7f07000a;
+        public static final int button6=0x7f070006;
+        public static final int content=0x7f070008;
+        public static final int gotoinformation=0x7f070010;
+        public static final int gotomenu=0x7f07000f;
+        public static final int lunch=0x7f07000b;
+        public static final int morningtaste=0x7f07000a;
+        public static final int noontaste=0x7f07000c;
         public static final int spinner1=0x7f070000;
-        public static final int webView1=0x7f07000e;
+        public static final int title=0x7f07000e;
+        public static final int webView1=0x7f070011;
     }
     public static final class layout {
         public static final int main=0x7f030000;
@@ -50,12 +54,14 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int hello=0x7f050001;
+        public static final int hello=0x7f050003;
+        public static final int webcontentcolor=0x7f050002;
+        public static final int weblist=0x7f050001;
     }
     public static final class style {
         public static final int CustomWindowTitleBackground=0x7f060000;
-        public static final int CustomWindowTitleBackgroundfornavigator=0x7f060002;
         public static final int navigator=0x7f060003;
         public static final int test=0x7f060001;
+        public static final int weblist=0x7f060002;
     }
 }

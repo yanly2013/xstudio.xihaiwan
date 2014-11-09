@@ -8,16 +8,16 @@
 <style name="test" parent="android:Theme">
      <item name="android:windowTitleSize">50dp</item>
      <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
-     <item name="android:background">#FFaea594</item>
+     <item name="android:background">#FFfae9b4</item>
 </style>
 
-<style name="CustomWindowTitleBackgroundfornavigator">
-       <item name="android:background">#FFEA7A1A</item>
-</style>
-
-<style name="navigator" parent="android:Theme">
+    <style name="weblist" parent="android:Theme">
      <item name="android:windowTitleSize">50dp</item>
-     <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackgroundfornavigator</item>
-     <item name="android:background">#FFEA7A1A</item>
+     <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+     <item name="android:background">#FF123456</item>
+</style>
+<style name="navigator" parent="android:Theme">
+     <item name="android:background">#FFfae9b4</item>
+
 </style>
 </resources>

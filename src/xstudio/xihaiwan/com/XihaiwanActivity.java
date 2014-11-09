@@ -63,7 +63,6 @@ public class XihaiwanActivity extends Activity {
 	private Button forthday = null;
 	private Button fifthday = null;
 	private Button sixthday = null;
-	private Button seventhday = null;
 	private ImageButton backimg = null;
 	private String[] dayseveryweek = new String[8];
 	private String[] breakfastmenu = new String[8];
@@ -73,6 +72,8 @@ public class XihaiwanActivity extends Activity {
 	private String[] daysinweekinString = { "星期日", "星期一", "星期二", "星期三", "星期四",
 			"星期五", "星期六" };
 	private int daysinweek = 0;
+	private TextView title = null;
+	private String todaystr = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -90,10 +91,14 @@ public class XihaiwanActivity extends Activity {
 		thirdday = (Button) findViewById(R.id.button3);
 		forthday = (Button) findViewById(R.id.button4);
 		fifthday = (Button) findViewById(R.id.button5);
+		sixthday = (Button) findViewById(R.id.button6);
 		breakfast = (TextView) findViewById(R.id.breakfast);
 		morningtaste = (TextView) findViewById(R.id.morningtaste);
 		lunch = (TextView) findViewById(R.id.lunch);
 		noontaste = (TextView) findViewById(R.id.noontaste);
+		
+		title = (TextView)findViewById(R.id.title);
+		title.setText("每日食谱");
 		backimg = (ImageButton)findViewById(R.id.backimagebtn);
 		
 		backimg.setOnClickListener(new OnClickListener() {
@@ -115,6 +120,8 @@ public class XihaiwanActivity extends Activity {
 				morningtaste.setText(morningtastemenu[1]);
 				lunch.setText(lunchmenu[1]);
 				noontaste.setText(noontastemenu[1]);
+				String contents = todaystr + "下面的是"+dayseveryweek[1]+"的菜单";
+				content.setText(contents);
 			}
 		});
 
@@ -126,6 +133,8 @@ public class XihaiwanActivity extends Activity {
 				morningtaste.setText(morningtastemenu[2]);
 				lunch.setText(lunchmenu[2]);
 				noontaste.setText(noontastemenu[2]);
+				String contents = todaystr + "下面的是"+dayseveryweek[2]+"的菜单";
+				content.setText(contents);
 			}
 		});
 
@@ -137,6 +146,8 @@ public class XihaiwanActivity extends Activity {
 				morningtaste.setText(morningtastemenu[3]);
 				lunch.setText(lunchmenu[3]);
 				noontaste.setText(noontastemenu[3]);
+				String contents = todaystr + "下面的是"+dayseveryweek[3]+"的菜单";
+				content.setText(contents);
 			}
 		});
 
@@ -148,6 +159,8 @@ public class XihaiwanActivity extends Activity {
 				morningtaste.setText(morningtastemenu[4]);
 				lunch.setText(lunchmenu[4]);
 				noontaste.setText(noontastemenu[4]);
+				String contents = todaystr + "下面的是"+dayseveryweek[4]+"的菜单";
+				content.setText(contents);
 			}
 		});
 
@@ -159,9 +172,23 @@ public class XihaiwanActivity extends Activity {
 				morningtaste.setText(morningtastemenu[5]);
 				lunch.setText(lunchmenu[5]);
 				noontaste.setText(noontastemenu[5]);
+				String contents = todaystr + "下面的是"+dayseveryweek[5]+"的菜单";
+				content.setText(contents);
 			}
 		});
 
+		sixthday.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				breakfast.setText(breakfastmenu[6]);
+				morningtaste.setText(morningtastemenu[6]);
+				lunch.setText(lunchmenu[6]);
+				noontaste.setText(noontastemenu[6]);
+				String contents = todaystr + "下面的是"+dayseveryweek[6]+"的菜单";
+				content.setText(contents);
+			}
+		});
 		final Runnable updateThread = new Runnable() {
 
 			public void run() {
@@ -176,12 +203,14 @@ public class XihaiwanActivity extends Activity {
 							XihaiwanActivity.this,
 							android.R.layout.simple_spinner_item, adapteweek);
 					_Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
 					// 绑定 Adapter到控件
 					spinner.setAdapter(_Adapter);
-					content.setText("加载成功！");
+					spinner.setSelection(linknum-1,true);
+					content.setText("加载中...");
 					msgs = null;
 				} else {
-					content.setText("数据错误！");
+					content.setText("数据错误！请重试");
 				}
 
 			}
@@ -194,10 +223,11 @@ public class XihaiwanActivity extends Activity {
 				if (msgs != null) {
 					Calendar cal = Calendar.getInstance();
 					int today = cal.get(Calendar.DAY_OF_WEEK);
-					content.setText("今天是" + daysinweekinString[today-1] + "");
+					todaystr = "今天是" + daysinweekinString[today-1] + "  ";
+					
 					int index = 0;
 					for (index = 0; index < daysinweek; index++) {
-						if (daysinweekinString[daysinweek]
+						if (daysinweekinString[today-1]
 								.equals(dayseveryweek[index].trim())) {
 							break;
 						}
@@ -210,14 +240,27 @@ public class XihaiwanActivity extends Activity {
 					morningtaste.setText(morningtastemenu[index]);
 					lunch.setText(lunchmenu[index]);
 					noontaste.setText(noontastemenu[index]);
+					String contents = todaystr + "下面的是"+dayseveryweek[index]+"的菜单";
+					 
 					firstday.setText(dayseveryweek[1]);
 					secondday.setText(dayseveryweek[2]);
 					thirdday.setText(dayseveryweek[3]);
 					forthday.setText(dayseveryweek[4]);
 					fifthday.setText(dayseveryweek[5]);
+					
+					if (daysinweek > 6)
+					{
+						sixthday.setText(dayseveryweek[6]);
+						sixthday.setVisibility(View.VISIBLE);
+					}
+					else
+					{
+						sixthday.setVisibility(View.INVISIBLE);
+					}
+					content.setText(contents);
 					msgs = null;
 				} else {
-					content.setText("数据错误！");
+					content.setText("数据错误！请重试");
 				}
 
 			}

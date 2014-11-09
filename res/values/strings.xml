@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">西海湾幼儿食谱</string>
+    <string name="weblist">校园资讯</string>
+    <string name="webcontentcolor">#FFfae9b4</string>
     <string name="hello">Hello World, XihaiwanActivity!</string>
 
 </resources>

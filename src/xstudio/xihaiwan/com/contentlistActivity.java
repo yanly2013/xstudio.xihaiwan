@@ -15,12 +15,14 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class contentlistActivity extends ListActivity {
@@ -30,6 +32,7 @@ public class contentlistActivity extends ListActivity {
 	private SimpleAdapter adapter = null;
 	ListView mListView = null;
 	private ImageButton backimg = null;
+	private TextView title = null;
 	ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();;
 
 	@Override
@@ -42,6 +45,7 @@ public class contentlistActivity extends ListActivity {
 			public void run() {
 				// 更新UI
 				setListAdapter(adapter);
+
 			}
 
 		};
@@ -82,13 +86,14 @@ public class contentlistActivity extends ListActivity {
 				android.R.layout.simple_list_item_2, new String[] { "title",
 						"text" }, new int[] { android.R.id.text1,
 						android.R.id.text2 });
+
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> adapterView, View view,
 					int position, long id) {
-				Toast.makeText(
-						contentlistActivity.this,
-						"您选择了标题：" + mlistUrl[position] + "内容："
-								+ mListdate[position], Toast.LENGTH_LONG).show();
+//				Toast.makeText(
+//						contentlistActivity.this,
+//						"您选择了标题：" + mlistUrl[position] + "内容："
+//								+ mListdate[position], Toast.LENGTH_LONG).show();
 				Intent it = new Intent();
 				it.putExtra("selecturl", mlistUrl[position]);
 				it.setClass(contentlistActivity.this, WebcontentActivity.class);
@@ -97,10 +102,13 @@ public class contentlistActivity extends ListActivity {
 		});
 		super.onCreate(savedInstanceState);
 
-
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,
 				R.layout.menutitlebar); // titlebar为自己标题栏的布局
+
 		ExitApplication.getInstance().addActivity(this);
+		title = (TextView)findViewById(R.id.title);
+		title.setText("校园资讯");
+		
 		backimg = (ImageButton)findViewById(R.id.backimagebtn);
 		backimg.setOnClickListener(new OnClickListener() {
 			
@@ -112,5 +120,8 @@ public class contentlistActivity extends ListActivity {
 				startActivity(it);	
 			}
 		});
+		
+//		TextView text1 = (TextView)mListView.findViewById(android.R.id.text1);
+//		text1.setTextColor(Color.BLACK);
 	}
 }
