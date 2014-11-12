@@ -38,5 +38,10 @@
         android:text="校园资讯"
         android:textColor="#FF000000"
         android:textSize="60dp" />
-
+    <LinearLayout
+    android:id="@+id/adLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+</LinearLayout>
 </LinearLayout>

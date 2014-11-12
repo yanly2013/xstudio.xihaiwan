@@ -24,6 +24,7 @@ public final class R {
     }
     public static final class id {
         public static final int ScrollView=0x7f070007;
+        public static final int adLayout=0x7f070011;
         public static final int backimagebtn=0x7f07000d;
         public static final int breakfast=0x7f070009;
         public static final int button1=0x7f070001;
@@ -40,7 +41,7 @@ public final class R {
         public static final int noontaste=0x7f07000c;
         public static final int spinner1=0x7f070000;
         public static final int title=0x7f07000e;
-        public static final int webView1=0x7f070011;
+        public static final int webView1=0x7f070012;
     }
     public static final class layout {
         public static final int main=0x7f030000;

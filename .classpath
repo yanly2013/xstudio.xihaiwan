@@ -5,5 +5,6 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="D:/Program Files/eclipse/plugins/jsoup-1.8.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/plugins/YoumiSdk_v4.10_2014-09-25_normal.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

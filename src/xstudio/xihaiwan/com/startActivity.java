@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
-
+import net.youmi.android.AdManager;
 public class startActivity extends Activity {
 	private final int SPLASH_DISPLAY_LENGHT = 2000; //—”≥Ÿ»˝√Î    
     
@@ -22,7 +22,8 @@ public class startActivity extends Activity {
            startActivity.this.finish();   
        }   
              
-      }, SPLASH_DISPLAY_LENGHT);   
+      }, SPLASH_DISPLAY_LENGHT); 
+     AdManager.getInstance(this).init("96011c1a40a53351", "504d0063271d3be7", false);
    }   
 
 }

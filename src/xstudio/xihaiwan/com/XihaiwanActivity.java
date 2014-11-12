@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -36,6 +39,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -83,7 +87,8 @@ public class XihaiwanActivity extends Activity {
 		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,
 				R.layout.menutitlebar); // titlebar为自己标题栏的布局
 		ExitApplication.getInstance().addActivity(this);
-		
+
+
 		content = (TextView) findViewById(R.id.content);
 		spinner = (Spinner) findViewById(R.id.spinner1);
 		firstday = (Button) findViewById(R.id.button1);
